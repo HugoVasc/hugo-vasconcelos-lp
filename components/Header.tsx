@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { useRouter } from "next/navigation";
 import { LOCALE_COOKIE, type Locale } from "@/lib/i18n";
 
 type Props = {
@@ -12,7 +11,6 @@ type Props = {
 
 export default function Header({ locale, name, nav }: Props) {
   const [open, setOpen] = useState(false);
-  const router = useRouter();
   const other: Locale = locale === "pt" ? "en" : "pt";
 
   const links = [
@@ -22,10 +20,11 @@ export default function Header({ locale, name, nav }: Props) {
     { href: "#contact", label: nav.contact },
   ];
 
+  // Link nativo: funciona mesmo sem JS. No clique, só grava a preferência e preserva a seção (#hash).
   function switchLanguage(e: React.MouseEvent<HTMLAnchorElement>) {
-    e.preventDefault();
-    document.cookie = `${LOCALE_COOKIE}=${other}; Path=/; Max-Age=31536000; SameSite=Lax; Secure`;
-    router.push(`/${other}${window.location.hash}`);
+    const secure = window.location.protocol === "https:" ? "; Secure" : "";
+    document.cookie = `${LOCALE_COOKIE}=${other}; Path=/; Max-Age=31536000; SameSite=Lax${secure}`;
+    e.currentTarget.href = `/${other}${window.location.hash}`;
   }
 
   return (
