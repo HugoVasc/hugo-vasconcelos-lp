@@ -1,9 +1,8 @@
 import type { Locale } from "./i18n";
 
 /**
- * ATENÇÃO: os dois projetos abaixo são RASCUNHOS genéricos, sem métricas.
- * Substitua por seus projetos reais (contexto, o que você entregou, resultados e stack)
- * antes de publicar.
+ * Projetos descritos apenas com o que foi informado (sem métricas ou ferramentas inventadas).
+ * Ao ter mais detalhes (stack, ganhos, prazos), acrescente em `delivered`, `results` e `stack`.
  */
 
 type Project = {
@@ -82,28 +81,28 @@ const pt: Dict = {
     stack: "Stack",
     items: [
       {
-        tag: "Engenharia de Dados",
-        title: "Plataforma de dados corporativa em nuvem",
-        context: "A empresa tinha dados espalhados em sistemas isolados, relatórios manuais e pouca confiança nos números.",
+        tag: "Engenharia de Dados & Analytics",
+        title: "Pipeline e painel analítico de categorização de clientes",
+        context: "Era preciso processar a categoria dos clientes sobre uma base com mais de 1 bilhão de registros e disponibilizar o resultado para análise.",
         delivered: [
-          "Arquitetura lakehouse em camadas (bruta, refinada e analítica).",
-          "Pipelines automatizados e orquestrados, com testes de qualidade e monitoramento.",
-          "Modelagem dimensional e catálogo de dados para autosserviço.",
+          "Pipeline de processamento em larga escala, cobrindo mais de 1 bilhão de registros.",
+          "Cálculo da categoria dos clientes dentro do pipeline.",
+          "Painel analítico para consultar e explorar as categorias de clientes.",
         ],
-        results: "Fonte única da verdade, atualização automática e muito menos tempo gasto em preparação manual de dados.",
-        stack: ["Python", "SQL", "Spark", "Airflow", "dbt", "Cloud"],
+        results: "Categorização de clientes sobre mais de 1 bilhão de registros, acessível em um painel analítico.",
+        stack: ["Pipeline de dados", "Alto volume (+1 bi)", "Painel analítico"],
       },
       {
-        tag: "IA & Analytics",
-        title: "Solução de IA e analytics para decisão de negócio",
-        context: "A liderança precisava antecipar cenários e consultar informações internas de forma rápida e confiável.",
+        tag: "Engenharia de Dados & IA",
+        title: "Pipeline de análise de licitações com LLM",
+        context: "As licitações combinam dados estruturados e documentos não estruturados, o que dificulta a análise em escala e a identificação de oportunidades.",
         delivered: [
-          "Modelo preditivo em produção, com acompanhamento de desempenho.",
-          "Assistente com LLM e RAG sobre a base de conhecimento interna.",
-          "Dashboards executivos com métricas padronizadas.",
+          "Extração de dados estruturados (JSON) e não estruturados das licitações.",
+          "Integração com LLM para interpretar o conteúdo extraído.",
+          "Relatório para análise jurídica, base para a posterior abordagem comercial.",
         ],
-        results: "Decisões mais rápidas e embasadas, com acesso simples às informações pelas áreas de negócio.",
-        stack: ["Python", "scikit-learn", "LLMs", "RAG", "Power BI"],
+        results: "Licitações transformadas em relatórios prontos para a análise jurídica e para apoiar a abordagem comercial.",
+        stack: ["Extração JSON", "Dados não estruturados", "LLM", "Relatórios"],
       },
     ],
   },
@@ -178,28 +177,28 @@ const en: Dict = {
     stack: "Stack",
     items: [
       {
-        tag: "Data Engineering",
-        title: "Enterprise cloud data platform",
-        context: "Data was scattered across isolated systems, reports were manual and trust in the numbers was low.",
+        tag: "Data Engineering & Analytics",
+        title: "Customer categorization pipeline and analytics dashboard",
+        context: "Customer categories had to be processed over a base of more than 1 billion records and made available for analysis.",
         delivered: [
-          "Layered lakehouse architecture (raw, refined and analytics).",
-          "Automated, orchestrated pipelines with data quality tests and monitoring.",
-          "Dimensional modeling and a data catalog for self-service.",
+          "Large-scale processing pipeline covering more than 1 billion records.",
+          "Customer category calculation within the pipeline.",
+          "Analytics dashboard to query and explore customer categories.",
         ],
-        results: "A single source of truth, automatic refreshes and far less time spent on manual data preparation.",
-        stack: ["Python", "SQL", "Spark", "Airflow", "dbt", "Cloud"],
+        results: "Customer categorization over more than 1 billion records, accessible through an analytics dashboard.",
+        stack: ["Data pipeline", "High volume (1B+)", "Analytics dashboard"],
       },
       {
-        tag: "AI & Analytics",
-        title: "AI and analytics solution for business decisions",
-        context: "Leadership needed to anticipate scenarios and query internal information quickly and reliably.",
+        tag: "Data Engineering & AI",
+        title: "Public tender analysis pipeline with LLM",
+        context: "Public tenders mix structured data and unstructured documents, making large-scale analysis and opportunity spotting hard.",
         delivered: [
-          "Predictive model in production, with performance tracking.",
-          "LLM + RAG assistant over the internal knowledge base.",
-          "Executive dashboards with standardized metrics.",
+          "Extraction of structured (JSON) and unstructured data from tenders.",
+          "LLM integration to interpret the extracted content.",
+          "Report for legal analysis, feeding the subsequent commercial outreach.",
         ],
-        results: "Faster, better-informed decisions, with simple access to information for business teams.",
-        stack: ["Python", "scikit-learn", "LLMs", "RAG", "Power BI"],
+        results: "Tenders turned into reports ready for legal analysis and to support commercial outreach.",
+        stack: ["JSON extraction", "Unstructured data", "LLM", "Reports"],
       },
     ],
   },
