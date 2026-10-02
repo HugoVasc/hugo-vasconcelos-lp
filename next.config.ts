@@ -31,6 +31,9 @@ const securityHeaders = [
 const nextConfig: NextConfig = {
   poweredByHeader: false,
   reactStrictMode: true,
+  // Permite abrir o dev server pelo IP da rede local (ex.: testar no celular). Sem isso o Next
+  // bloqueia os scripts de dev nessa origem e a página não hidrata (menu/botões não funcionam).
+  allowedDevOrigins: ["192.168.*.*", "10.*.*.*"],
   async headers() {
     return [{ source: "/(.*)", headers: securityHeaders }];
   },
