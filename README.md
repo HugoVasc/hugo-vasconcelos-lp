@@ -42,6 +42,8 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 2. [ ] Criar componentes básicos reutilizáveis
     2.1. [ ] Criar componente para imagem
     2.2. [ ] Criar componentes para textos
+    2.3. [ ] Criar carrossel de ferramentas
+    2.4 [ ] Criar Componente para adicionar certificações / Projetos
     2.x [ ] Permitir múltiplas linguagens (alterar linguagem com base na língua padrão do navegador, mas permitir alteração manual)
 3. [ ] Estruturar página em sessões
     3.1. [ ] Criar sessão hero
