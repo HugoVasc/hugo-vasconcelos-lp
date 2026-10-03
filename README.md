@@ -87,8 +87,8 @@ Copy `.env.example` to `.env.local` for local development, and set the same vari
 | `NEXT_PUBLIC_SITE_URL` | Final public URL (e.g. `https://your-domain.com`). Used in canonical URLs, `hreflang`, sitemap and Open Graph. Falls back to the Vercel production URL, then `localhost`. |
 | `NEXT_PUBLIC_CONTACT_EMAIL` | Email that receives the contact messages. |
 | `NEXT_PUBLIC_WHATSAPP_NUMBER` | Digits only, with country and area code (e.g. `5511999999999`). When empty, the WhatsApp button is hidden. |
-| `NEXT_PUBLIC_LINKEDIN_URL` | Optional; added to the structured data (`sameAs`). |
-| `NEXT_PUBLIC_GITHUB_URL` | Optional; added to the structured data (`sameAs`). |
+| `NEXT_PUBLIC_LINKEDIN_URL` | LinkedIn profile shown in the social buttons. The button is hidden while empty. |
+| `NEXT_PUBLIC_GITHUB_URL` | GitHub profile shown in the social buttons (defaults to `https://github.com/HugoVasc`). |
 
 ## Enabling the company block
 

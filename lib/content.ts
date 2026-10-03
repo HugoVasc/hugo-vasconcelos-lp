@@ -16,13 +16,33 @@ type Project = {
 
 export type Dict = {
   meta: { title: string; description: string; keywords: string[]; ogAlt: string };
-  nav: { about: string; skills: string; projects: string; contact: string; menu: string; lang: string };
-  hero: { eyebrow: string; title: string; subtitle: string; ctaProjects: string; ctaEmail: string; ctaWhatsapp: string };
-  about: { title: string; paragraphs: string[] };
-  skills: { title: string; intro: string; pillars: { name: string; description: string; tools: string[] }[] };
-  projects: { title: string; intro: string; context: string; delivered: string; results: string; stack: string; items: Project[] };
-  contact: { title: string; text: string; email: string; whatsapp: string; messages: { emailSubject: string; emailBody: string; whatsappText: string } };
-  footer: { rights: string; top: string };
+  nav: { about: string; skills: string; projects: string; contact: string; hire: string; menu: string; lang: string };
+  hero: {
+    badge: string;
+    titleA: string;
+    titleB: string;
+    subtitle: string;
+    ctaProjects: string;
+    ctaEmail: string;
+    ctaWhatsapp: string;
+    scroll: string;
+  };
+  about: { eyebrow: string; title: string; paragraphs: string[]; highlights: string[]; cardLabel: string; cardValue: string };
+  skills: { eyebrow: string; title: string; pillars: { name: string; description: string; tools: string[] }[] };
+  projects: { eyebrow: string; title: string; context: string; delivered: string; results: string; stack: string; items: Project[] };
+  contact: {
+    eyebrow: string;
+    title: string;
+    text: string;
+    email: string;
+    whatsapp: string;
+    emailLabel: string;
+    chooseTitle: string;
+    chooseText: string;
+    previewLabel: string;
+    messages: { emailSubject: string; emailBody: string; whatsappText: string };
+  };
+  footer: { tagline: string; rights: string; top: string; github: string; linkedin: string; emailLabel: string };
   jobTitle: string;
 };
 
@@ -34,26 +54,37 @@ const pt: Dict = {
     keywords: ["engenheiro de dados", "engenharia de dados", "inteligência artificial", "analytics", "data engineer", "pipelines de dados", "business intelligence", "Hugo Vasconcelos"],
     ogAlt: "Hugo Vasconcelos — Engenharia de Dados, IA e Analytics",
   },
-  nav: { about: "Sobre", skills: "Competências", projects: "Projetos", contact: "Contato", menu: "Abrir menu", lang: "Idioma" },
+  nav: { about: "Sobre", skills: "Serviços", projects: "Projetos", contact: "Contato", hire: "Fale comigo", menu: "Abrir menu", lang: "Idioma" },
   hero: {
-    eyebrow: "Engenharia de Dados · IA · Analytics",
-    title: "Transformo dados em decisões e produtos que geram resultado.",
+    badge: "Disponível para projetos",
+    titleA: "Transformando dados em",
+    titleB: "decisões e valor",
     subtitle:
-      "Sou Hugo Vasconcelos, profissional de dados. Construo plataformas confiáveis, modelos de IA aplicados ao negócio e análises que a liderança realmente usa.",
+      "Sou Hugo Vasconcelos, profissional de dados. Construo plataformas confiáveis, soluções de IA aplicadas ao negócio e análises que a liderança realmente usa.",
     ctaProjects: "Ver projetos",
     ctaEmail: "Enviar e-mail",
     ctaWhatsapp: "Chamar no WhatsApp",
+    scroll: "Rolar",
   },
   about: {
-    title: "Sobre mim",
+    eyebrow: "Sobre mim",
+    title: "Profissional de dados com mentalidade de construtor",
     paragraphs: [
       "Atuo na ponte entre tecnologia e negócio: da ingestão e modelagem dos dados à entrega de dashboards, modelos preditivos e soluções com IA generativa.",
       "Valorizo pipelines simples de operar, qualidade de dados mensurável e documentação clara — para que o time continue evoluindo a solução depois da entrega.",
     ],
+    highlights: [
+      "Pipelines de dados em larga escala (+1 bilhão de registros)",
+      "Extração de dados estruturados e não estruturados com LLM",
+      "Painéis analíticos e relatórios para apoiar decisões",
+      "Comunicação clara entre áreas técnicas e de negócio",
+    ],
+    cardLabel: "Foco",
+    cardValue: "Dados · IA · Analytics",
   },
   skills: {
-    title: "Competências",
-    intro: "Três frentes que se complementam em um mesmo projeto de dados.",
+    eyebrow: "O que eu faço",
+    title: "Serviços pensados para a sua jornada de dados",
     pillars: [
       {
         name: "Engenharia de Dados",
@@ -73,8 +104,8 @@ const pt: Dict = {
     ],
   },
   projects: {
+    eyebrow: "Portfólio",
     title: "Projetos em destaque",
-    intro: "Dois dos maiores projetos de dados que entreguei.",
     context: "Contexto",
     delivered: "O que entreguei",
     results: "Resultado",
@@ -107,10 +138,15 @@ const pt: Dict = {
     ],
   },
   contact: {
-    title: "Vamos conversar?",
-    text: "Tem um desafio com dados, IA ou analytics? Me chame por e-mail ou WhatsApp — a mensagem já vai pronta, é só ajustar e enviar.",
+    eyebrow: "Contato",
+    title: "Vamos construir algo incrível juntos?",
+    text: "Tem um desafio com dados, IA ou analytics? Seja uma plataforma de dados, um painel que conte uma história ou uma solução com IA — vamos conversar.",
     email: "Entrar em contato por e-mail",
     whatsapp: "Entrar em contato pelo WhatsApp",
+    emailLabel: "E-mail",
+    chooseTitle: "Escolha como falar comigo",
+    chooseText: "A mensagem já vai pronta, é só ajustar e enviar.",
+    previewLabel: "Mensagem sugerida",
     messages: {
       emailSubject: "Contato pelo site — projeto de dados",
       emailBody:
@@ -118,7 +154,14 @@ const pt: Dict = {
       whatsappText: "Olá, Hugo! Vi seu site e gostaria de conversar sobre um projeto de dados.",
     },
   },
-  footer: { rights: "Todos os direitos reservados.", top: "Voltar ao topo" },
+  footer: {
+    tagline: "Engenharia de Dados · IA · Analytics",
+    rights: "Todos os direitos reservados.",
+    top: "Voltar ao topo",
+    github: "GitHub",
+    linkedin: "LinkedIn",
+    emailLabel: "E-mail",
+  },
   jobTitle: "Profissional de dados — Engenharia de Dados, IA e Analytics",
 };
 
@@ -130,26 +173,37 @@ const en: Dict = {
     keywords: ["data engineer", "data engineering", "artificial intelligence", "analytics", "data pipelines", "business intelligence", "Hugo Vasconcelos"],
     ogAlt: "Hugo Vasconcelos — Data Engineering, AI & Analytics",
   },
-  nav: { about: "About", skills: "Skills", projects: "Projects", contact: "Contact", menu: "Open menu", lang: "Language" },
+  nav: { about: "About", skills: "Services", projects: "Projects", contact: "Contact", hire: "Hire me", menu: "Open menu", lang: "Language" },
   hero: {
-    eyebrow: "Data Engineering · AI · Analytics",
-    title: "I turn data into decisions and products that deliver results.",
+    badge: "Available for projects",
+    titleA: "Turning data into",
+    titleB: "decisions & value",
     subtitle:
-      "I'm Hugo Vasconcelos, a data professional. I build reliable platforms, business-focused AI models and analytics that leadership actually uses.",
+      "I'm Hugo Vasconcelos, a data professional. I build reliable platforms, business-focused AI solutions and analytics that leadership actually uses.",
     ctaProjects: "View projects",
     ctaEmail: "Send an email",
     ctaWhatsapp: "Message on WhatsApp",
+    scroll: "Scroll",
   },
   about: {
-    title: "About me",
+    eyebrow: "About me",
+    title: "Data professional with a builder's mindset",
     paragraphs: [
       "I work at the bridge between technology and business: from data ingestion and modeling to dashboards, predictive models and generative AI solutions.",
       "I value pipelines that are simple to operate, measurable data quality and clear documentation — so the team can keep evolving the solution after delivery.",
     ],
+    highlights: [
+      "Large-scale data pipelines (1B+ records)",
+      "Structured and unstructured data extraction with LLMs",
+      "Analytics dashboards and reports that support decisions",
+      "Clear communication between technical and business teams",
+    ],
+    cardLabel: "Focus",
+    cardValue: "Data · AI · Analytics",
   },
   skills: {
-    title: "Skills",
-    intro: "Three complementary fronts within a single data project.",
+    eyebrow: "What I do",
+    title: "Services built around your data journey",
     pillars: [
       {
         name: "Data Engineering",
@@ -169,8 +223,8 @@ const en: Dict = {
     ],
   },
   projects: {
+    eyebrow: "Portfolio",
     title: "Featured projects",
-    intro: "Two of the biggest data projects I have delivered.",
     context: "Context",
     delivered: "What I delivered",
     results: "Outcome",
@@ -203,10 +257,15 @@ const en: Dict = {
     ],
   },
   contact: {
-    title: "Let's talk?",
-    text: "Have a challenge with data, AI or analytics? Reach out by email or WhatsApp — the message is pre-filled, just tweak it and send.",
+    eyebrow: "Contact",
+    title: "Let's build something great together",
+    text: "Have a challenge with data, AI or analytics? Whether it's a data platform, a dashboard that tells a story or an AI solution — let's talk.",
     email: "Contact me by email",
     whatsapp: "Contact me on WhatsApp",
+    emailLabel: "Email",
+    chooseTitle: "Choose how to reach me",
+    chooseText: "The message is pre-filled, just tweak it and send.",
+    previewLabel: "Suggested message",
     messages: {
       emailSubject: "Website inquiry — data project",
       emailBody:
@@ -214,7 +273,14 @@ const en: Dict = {
       whatsappText: "Hi Hugo! I found your website and would like to talk about a data project.",
     },
   },
-  footer: { rights: "All rights reserved.", top: "Back to top" },
+  footer: {
+    tagline: "Data Engineering · AI · Analytics",
+    rights: "All rights reserved.",
+    top: "Back to top",
+    github: "GitHub",
+    linkedin: "LinkedIn",
+    emailLabel: "Email",
+  },
   jobTitle: "Data professional — Data Engineering, AI and Analytics",
 };
 

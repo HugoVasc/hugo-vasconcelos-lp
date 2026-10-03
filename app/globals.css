@@ -2,25 +2,27 @@
 
 :root {
   --background: #f3eee4;
-  --surface: #faf7f0;
-  --foreground: #1e2a2d;
-  --muted: #56666a;
-  --line: #ddd5c4;
-  --accent: #1d6b59;
-  --accent-dark: #14503f;
-  --accent-soft: #dcebe4;
+  --background-alt: #ede8dc;
+  --foreground: #1c1c1c;
+  --muted: #4a5552;
+  --line: rgba(20, 80, 63, 0.12);
+  --accent: #14503f;
+  --accent-dark: #0f3d30;
+  --accent-soft: rgba(20, 80, 63, 0.08);
+  --gold: #8a6a3a;
   color-scheme: light;
 }
 
 @theme inline {
   --color-background: var(--background);
-  --color-surface: var(--surface);
+  --color-alt: var(--background-alt);
   --color-foreground: var(--foreground);
   --color-muted: var(--muted);
   --color-line: var(--line);
   --color-accent: var(--accent);
   --color-accent-dark: var(--accent-dark);
   --color-accent-soft: var(--accent-soft);
+  --color-gold: var(--gold);
   --font-sans: var(--font-geist-sans);
 }
 
@@ -29,7 +31,7 @@ html {
 }
 
 section[id] {
-  scroll-margin-top: 4.5rem;
+  scroll-margin-top: 3rem;
 }
 
 body {
