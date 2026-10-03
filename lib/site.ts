@@ -6,7 +6,7 @@ export const site = {
   // Somente dígitos, com DDI + DDD. Ex.: 5511999999999. Vazio => botão de WhatsApp oculto.
   whatsapp: (process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "").replace(/\D/g, ""),
   linkedin: process.env.NEXT_PUBLIC_LINKEDIN_URL ?? "",
-  github: process.env.NEXT_PUBLIC_GITHUB_URL ?? "",
+  github: process.env.NEXT_PUBLIC_GITHUB_URL ?? "https://github.com/HugoVasc",
 };
 
 export const siteUrl = (

@@ -24,7 +24,7 @@ export default function CompanyInfo({ locale }: { locale: Locale }) {
   ];
 
   return (
-    <section aria-labelledby="company-title" className="border-t border-line bg-surface">
+    <section aria-labelledby="company-title" className="border-t border-line bg-alt">
       <div className="mx-auto max-w-5xl px-5 py-10">
         <h2 id="company-title" className="text-sm font-semibold uppercase tracking-wider text-muted">
           {t.title}
